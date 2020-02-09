@@ -1,13 +1,11 @@
 import React from 'react';
-import Footer from './components/Footer'
-import AddTodo from './containers/AddTodo'
-import VisibleTodoList from './containers/VisibleTodoList'
+import DisplayContainer from './containers/DisplayContainer'
+import NumberPadContainer from './containers/NumberPadContainer'
 
 const App = () => (
   <div>
-    <AddTodo />
-    <VisibleTodoList />
-    <Footer />
+    <DisplayContainer value={0} />
+    <NumberPadContainer />
   </div>
 )
 export default App
