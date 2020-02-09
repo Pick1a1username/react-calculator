@@ -1,6 +1,5 @@
 import { connect } from 'react-redux'
-import { addValue } from '../actions'
-import { typeValue } from '../actions'
+import { addValue, typeValue, calculate, Operators } from '../actions'
 import NumberPad from '../components/NumberPad'
 
 const mapStateToProps = () => {
@@ -14,6 +13,9 @@ const mapDispatchToProps = dispatch => {
     },
     typeValue: value => {
       dispatch(typeValue(value))
+    },
+    addition: () => {
+      dispatch(calculate(Operators.ADDITION))
     }
   }
 }

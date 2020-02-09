@@ -28,6 +28,11 @@ export const typeValue = value => ({
   value
 })
 
+export const calculate = operator => ({
+  type: 'CALCULATE',
+  operator
+})
+
 export const Operators = {
   ADDITION: 'ADDITION',
   SUBSTRACTION: 'SUBSTRACTION',

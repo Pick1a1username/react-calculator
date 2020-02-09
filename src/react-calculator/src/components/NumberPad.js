@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const NumberPad = ({ addValue, typeValue }) => (
+const NumberPad = ({ addValue, typeValue, addition }) => (
     <div>
         <button onClick={e => addValue(1)}>+1</button>
         <button>-1</button><br />
@@ -15,7 +15,7 @@ const NumberPad = ({ addValue, typeValue }) => (
         <button onClick={e => typeValue(8)}>8</button>
         <button onClick={e => typeValue(9)}>9</button>
         <button onClick={e => typeValue(0)}>0</button><br />
-        <button>+</button>
+        <button onClick={e => addition()}>+</button>
         <button>-</button>
         <button>*</button>
         <button>/</button>
