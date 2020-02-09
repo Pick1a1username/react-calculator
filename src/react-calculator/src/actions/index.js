@@ -20,5 +20,10 @@
 
 export const addValue = value => ({
   type: 'ADD_VALUE',
-  value: value
+  value
+})
+
+export const typeValue = value => ({
+  type: 'TYPE_VALUE',
+  value
 })
