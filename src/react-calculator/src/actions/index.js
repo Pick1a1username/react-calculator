@@ -27,3 +27,11 @@ export const typeValue = value => ({
   type: 'TYPE_VALUE',
   value
 })
+
+export const Operators = {
+  ADDITION: 'ADDITION',
+  SUBSTRACTION: 'SUBSTRACTION',
+  MULTIPLICATION: 'MULTIPLICATION',
+  DIVISION: 'DIVISION',
+  EQUAL: 'EQUAL'
+}

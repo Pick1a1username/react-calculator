@@ -6,7 +6,6 @@ import calculatorApp from './reducers'
 import App from './App'
 
 const store = createStore(calculatorApp)
-console.log(store.getState())
 
 render(
   <Provider store={store}>

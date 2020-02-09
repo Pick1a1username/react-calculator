@@ -14,7 +14,11 @@ const NumberPad = ({ addValue, typeValue }) => (
         <button onClick={e => typeValue(7)}>7</button>
         <button onClick={e => typeValue(8)}>8</button>
         <button onClick={e => typeValue(9)}>9</button>
-        <button onClick={e => typeValue(0)}>0</button>
+        <button onClick={e => typeValue(0)}>0</button><br />
+        <button>+</button>
+        <button>-</button>
+        <button>*</button>
+        <button>/</button>
     </div>
 )
 

@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import Display from '../components/Display'
 
 const mapStateToProps = state => {
-  console.log(state)
+  // console.log(state)
   return {
     value: state.numberDisplayed
   }
