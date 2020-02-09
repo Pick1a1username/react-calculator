@@ -14,6 +14,15 @@ const mapDispatchToProps = dispatch => {
     addition: () => {
       dispatch(calculate(Operators.ADDITION))
     },
+    substraction: () => {
+      dispatch(calculate(Operators.SUBSTRACTION))
+    },
+    multiplication: () => {
+      dispatch(calculate(Operators.MULTIPLICATION))
+    },
+    division: () => {
+      dispatch(calculate(Operators.DIVISION))
+    },
     equal: () => {
       dispatch(calculate(Operators.EQUAL))
     },

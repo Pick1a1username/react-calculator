@@ -14,9 +14,9 @@ const NumberPad = (props) => (
         <button onClick={e => props.typeValue(9)}>9</button>
         <button onClick={e => props.typeValue(0)}>0</button><br />
         <button onClick={e => props.addition()}>+</button>
-        <button>-</button>
-        <button>*</button>
-        <button>/</button>
+        <button onClick={e => props.substraction()}>-</button>
+        <button onClick={e => props.multiplication()}>*</button>
+        <button onClick={e => props.division()}>/</button>
         <button onClick={e => props.equal()}>=</button><br />
         <button onClick={e => props.c()}>C</button>
         <button onClick={e => props.ac()}>AC</button>
