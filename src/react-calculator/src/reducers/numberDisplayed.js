@@ -11,13 +11,6 @@ const numberDisplayed = (
   ) => {
   let calculated = 0
   switch (action.type) {
-    case 'ADD_VALUE':
-      return {
-        leftValue: state.rightValue,
-        rightValue: state.leftValue + action.value,
-        currentOperator: Operators.EQUAL,
-        nextValue: false
-      }
     case 'TYPE_VALUE':
       if (state.nextValue) return { ...state, rightValue: action.value, nextValue: false }
       return { ...state, rightValue: parseInt(`${state.rightValue}${action.value}`) }
