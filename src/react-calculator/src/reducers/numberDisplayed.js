@@ -9,7 +9,6 @@ const numberDisplayed = (
   },
   action
   ) => {
-  console.log(state)
   let calculated = 0
   switch (action.type) {
     case 'ADD_VALUE':
