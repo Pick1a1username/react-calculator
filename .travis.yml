@@ -13,6 +13,6 @@ before_install:
 # https://github.com/dwyl/learn-travis/issues/35
 # script: echo "npm test temporarily disabled"
 
-build:
+script:
     - echo "npm test temporarily disabled"
     - npm run-script build
