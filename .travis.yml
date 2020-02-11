@@ -27,5 +27,5 @@ deploy:
     local_dir: src/react-calculator/build
     target_branch: master
     on:
-        branch: travis_ui_setup
+        branch: master
     
