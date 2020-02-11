@@ -1,14 +1,14 @@
 import { Operators } from '../actions'
 
-const numberDisplayed = (
-  state = {
-    leftValue: 0,
-    rightValue: 0,
-    currentOperator: Operators.EQUAL,
-    nextValue: true
-  },
-  action
-  ) => {
+const defaultState = {
+  leftValue: 0,
+  rightValue: 0,
+  currentOperator: Operators.EQUAL,
+  nextValue: true,
+  noOperatorPassed: true
+}
+
+const numberDisplayed = ( state = defaultState, action ) => {
   let calculated = 0
   switch (action.type) {
     case 'TYPE_VALUE':
@@ -22,7 +22,8 @@ const numberDisplayed = (
             leftValue: calculated,
             currentOperator: Operators.ADDITION,
             rightValue: calculated,
-            nextValue: true
+            nextValue: true,
+            noOperatorPassed: false
           }
         case Operators.SUBSTRACTION:
           calculated = state.leftValue - state.rightValue;
@@ -30,23 +31,40 @@ const numberDisplayed = (
             leftValue: calculated,
             currentOperator: Operators.SUBSTRACTION,
             rightValue: calculated,
-            nextValue: true
+            nextValue: true,
+            noOperatorPassed: false
           }
         case Operators.MULTIPLICATION:
+          if (state.noOperatorPassed) return {
+            leftValue: state.rightValue,
+            currentOperator: Operators.MULTIPLICATION,
+            rightValue: state.rightValue,
+            nextValue: true,
+            noOperatorPassed: false
+          }
           calculated = state.leftValue * state.rightValue;
           return {
             leftValue: calculated,
             currentOperator: Operators.MULTIPLICATION,
             rightValue: calculated,
-            nextValue: true
+            nextValue: true,
+            noOperatorPassed: false
           }
         case Operators.DIVISION:
+          if (state.noOperatorPassed) return {
+            leftValue: state.rightValue,
+            currentOperator: Operators.DIVISION,
+            rightValue: state.rightValue,
+            nextValue: true,
+            noOperatorPassed: false
+          }
           calculated = state.leftValue / state.rightValue;
           return {
             leftValue: calculated,
             currentOperator: Operators.DIVISION,
             rightValue: calculated,
-            nextValue: true
+            nextValue: true,
+            noOperatorPassed: false
           }
         case Operators.EQUAL:
           if (state.currentOperator === Operators.ADDITION) {
@@ -92,12 +110,7 @@ const numberDisplayed = (
     case 'C':
       return { ...state, rightValue: 0 }
     case 'AC':
-      return state = {
-        leftValue: 0,
-        rightValue: 0,
-        currentOperator: Operators.EQUAL,
-        nextValue: Boolean
-      }
+      return defaultState
     default:
       return state
   }
