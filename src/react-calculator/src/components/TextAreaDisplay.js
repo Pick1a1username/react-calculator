@@ -5,7 +5,7 @@ import './TextAreaDisplay.css'
 
 // https://stackoverflow.com/questions/33245017/react-modifying-textarea-values
 const TextAreaDisplay = ({ value }) => (
-  <textarea className="display" rows="1" cols="10" value={value}/>
+  <textarea className="display" rows="1" cols="20" value={value}/>
 )
 
 TextAreaDisplay.propTypes = {
