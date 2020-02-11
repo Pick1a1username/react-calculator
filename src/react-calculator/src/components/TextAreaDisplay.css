@@ -1,0 +1,5 @@
+textarea.display {
+    resize: none;
+    /* https://stackoverflow.com/questions/33974050/left-align-text-in-text-area */
+    text-align: right;
+  }

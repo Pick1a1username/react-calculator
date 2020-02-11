@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
-import Display from '../components/Display'
+// import SimpleDisplay from '../components/SimpleDisplay'
+import TextAreaDisplay from '../components/TextAreaDisplay'
 
 const mapStateToProps = state => {
   return {
@@ -15,6 +16,6 @@ const mapDispatchToProps = () => {
 const DisplayContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Display)
+)(TextAreaDisplay)
 
 export default DisplayContainer
