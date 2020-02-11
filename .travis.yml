@@ -5,9 +5,8 @@ node_js:
   - "10"
 
 stages:
-    - script
     - build
-    
+
 before_install:
     - cd src/react-calculator
 
