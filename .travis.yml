@@ -11,7 +11,8 @@ before_install:
     - cd src/react-calculator
 
 # https://github.com/dwyl/learn-travis/issues/35
-script: echo "npm test temporarily disabled"
+# script: echo "npm test temporarily disabled"
 
 build:
+    - echo "npm test temporarily disabled"
     - npm run-script build
