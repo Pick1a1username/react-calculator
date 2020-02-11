@@ -11,3 +11,4 @@ Click [this link](https://pick1a1username.github.io/react-calculator-hosting/) i
 * Write a manual
 * Write a flow chart of the reducer
 * Write a description about how Redux works with React
+* Test automation
