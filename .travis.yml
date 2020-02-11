@@ -25,6 +25,7 @@ deploy:
     repo: pick1a1username/react-calculator-hosting
     keep_history: true
     local_dir: /src/react-calculator/build
+    target_branch: master
     on:
-        branch: master
+        branch: travis_ci_setup
     
