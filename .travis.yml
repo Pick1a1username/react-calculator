@@ -5,7 +5,8 @@ node_js:
   - "10"
 
 stages:
-    - build
+    - script
+    - deploy
 
 before_install:
     - cd src/react-calculator
@@ -16,3 +17,14 @@ before_install:
 script:
     - echo "npm test temporarily disabled"
     - npm run-script build
+
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+    repo: pick1a1username/react-calculator-hosting
+    keep_history: true
+    local_dir: /src/react-calculator/build
+    on:
+        branch: master
+    
